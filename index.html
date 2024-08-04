@@ -2,14 +2,60 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>My first three.js app</title>
+    <title>chair transition demo</title>
     <style>
       body {
         margin: 0;
       }
     </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Observer.min.js"></script>
   </head>
   <body>
+    <style>
+      h1 {
+        font-size: 4.5rem;
+        line-height: 1;
+      }
+      section {
+        height: 100%;
+        width: 100%;
+        top: 0;
+        padding: 0 1rem;
+        position: fixed;
+        visibility: hidden;
+      }
+    </style>
+    <div id="smooth-content">
+      <div id="scene" class="fixed z-[-1]"></div>
+      <section id="sec1">
+        <div class="w-full h-full flex flex-row-reverse items-center">
+          <div class="w-1/2 flex flex-col gap-4 description">
+            <h1>AIRDY</h1>
+            <h6>
+              A hair dryer with an aesthetic and elegant appearance with its
+              patterns on its surfaces, aiming to avoid damage to the hair
+              thanks to the heat setting that can be personalized according to
+              hair types.
+            </h6>
+          </div>
+        </div>
+      </section>
+      <section id="sec2">
+        <div class="w-full h-full flex items-center">
+          <div class="w-1/2 flex flex-col gap-4 description">
+            <h1>Brief</h1>
+            <h6>
+              Reimagine one of Tom Dixon's iconic lamps, introducing a unique
+              twist on the product through variations in form, arrangement, CMF,
+              or the setting it's envisioned in.
+            </h6>
+          </div>
+        </div>
+      </section>
+    </div>
     <script type="module" src="/main.js"></script>
   </body>
 </html>
